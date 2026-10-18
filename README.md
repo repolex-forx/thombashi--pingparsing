@@ -1,1 +1,148 @@
-Initializing
+# Repolex Knowledge Graph of thombashi/pingparsing
+
+RDF knowledge graph data for [thombashi/pingparsing](https://github.com/thombashi/pingparsing), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download thombashi/pingparsing
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── 5c9d51d322298c5c0777088af504e044b0896d37
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── 5c9d51d322298c5c0777088af504e044b0896d37
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 01916bc99dc503258689442d4247ca34fc0930ed.nq.gz
+│   ├── 04eaac3a0a526d3b36ffba51c4be2dcc44ff6b15.nq.gz
+│   ├── 056ede01e5694a695f290ccffa2f46b7f265b4cb.nq.gz
+│   ├── 066ea45248d245f3e0dd2806be6acfa41d32d8b9.nq.gz
+│   ├── 0a73b413a8a8b6d0fb4747a906102b758cc827d2.nq.gz
+│   ├── 15a6dd61aa8bc9e899a6a3ddc22f44a31a43600c.nq.gz
+│   ├── 1f9f967e51ea45f603667aeaf8bb62746b670e11.nq.gz
+│   ├── 217eae19c3559783176117b1c7d5b89e647f6d76.nq.gz
+│   ├── 2326adb896292c5e543bc6b17ebdacceb4eb021f.nq.gz
+│   ├── 268c00e0364506fa384d9b019001de22beee5332.nq.gz
+│   ├── 276b3d511f1751f118ceae6294364c277437d76e.nq.gz
+│   ├── 2902dfe9a849bbd09d1a7a674c196d1d9d3e7bb8.nq.gz
+│   ├── 2daf35eec8ffa190e8b165d4b2c20e8a69db1a03.nq.gz
+│   ├── 360855e5999cf5ec3785ca24d0b76b1b6cc5c175.nq.gz
+│   ├── 3801af2f1359cb45721ed1b22c8b155c2eab6b2c.nq.gz
+│   ├── 3e3203d9039cdac9d5e91b918b68a549e2ac1efc.nq.gz
+│   ├── 4388c8e09829c324f4f0de4d41b0e77be8834af5.nq.gz
+│   ├── 457d4e757c9d95be35ad9d6d695a1a1bb23ba1fb.nq.gz
+│   ├── 464738186ec7272ff06624ea0c235519f4601784.nq.gz
+│   ├── 4b763c8b99c0fe2f749877cb105d40b0eb31ec73.nq.gz
+│   ├── 4e4f84b6c29037306cdb56e03e6c0172ed95719c.nq.gz
+│   ├── 520eaae4371acd8082caff88c1a5affa75886f96.nq.gz
+│   ├── 52b9a293db74048e8011aa7581ea9a7977d1b4fd.nq.gz
+│   ├── 584f87161e19fc6aef9addcd5e505ab08862b885.nq.gz
+│   ├── 5c2067af0ee422c548e38ecc6ed1a838282661ec.nq.gz
+│   ├── 5d8af88e6ffb229271aa51f46ed67ca598ae2a4d.nq.gz
+│   ├── 5e7a16550013d16c884e1c425eb9f78a6d474422.nq.gz
+│   ├── 6ab2815e2a9de38d04dea68f217289ac91101989.nq.gz
+│   ├── 6e15b049b979eccb9deaca6c30123d0a12007006.nq.gz
+│   ├── 75646a33018b661b07a9544fe2a2dfafcea96f6c.nq.gz
+│   ├── 7637a9be8905f2321086ac02e363ed965806dbbb.nq.gz
+│   ├── 792e2d8cfa4e63914802f6b241ede580f2791f72.nq.gz
+│   ├── 7e384537b07ec85a174e75e430f119bc49bf3073.nq.gz
+│   ├── 815c43840c2d9bb8cc9055af5e72fbf904fcb9b1.nq.gz
+│   ├── 86d5a293e7f2b6527b043a98dfb49873e5fa6039.nq.gz
+│   ├── 89ca58fe7eddc63845ea21610118d821ee74eb4f.nq.gz
+│   ├── 8fb4f493d7701dda37c1c67161167248da096a3c.nq.gz
+│   ├── 946cf0e16103a1a9118f22468c58b0342589918e.nq.gz
+│   ├── 96119871ac7c2d9986f7ee5474a39c3a4cb470d0.nq.gz
+│   ├── 98e8bf511e72c273c81d0dd1628c26eaae598aa0.nq.gz
+│   ├── 99790469b94f2fd5f3ffbdeba75ca7da307506d4.nq.gz
+│   ├── 9a31a5dbbe3401d08e3b0fc1b657f1c49d2ae339.nq.gz
+│   ├── 9bfeea93207aeaa1dc5778706a232d0c13213b24.nq.gz
+│   ├── 9f9f3dd679aade337382dda34d47dad8beff6cb7.nq.gz
+│   ├── 9ffe9be1c365b0e0b6de946f0e864a4cd391f1e3.nq.gz
+│   ├── a4c7796facdd54a093506d320b9c32b41a2ddfbc.nq.gz
+│   ├── a8a013f606c969a69b305cd9f6e66fc260892bbf.nq.gz
+│   ├── a8a30bd9112eb6c81863228cb2c73991d8a4f7e0.nq.gz
+│   ├── b202e64fb61f2a239ab8be98abb6994f3b07107a.nq.gz
+│   ├── b2fa2dd290435a9d51bedc0dd9a4b3c7c5cb4df0.nq.gz
+│   ├── b835883f6fc3bc3f53afaee500f309f3a7cd03cc.nq.gz
+│   ├── b838d796e9dd8fcc7e2a15732e30d04bbfb1058c.nq.gz
+│   ├── b95fbc753efe9e3b510adff1d40caa00051fe5a1.nq.gz
+│   ├── bb3a26ef4761c80a2dea53869d6100ecc93b826d.nq.gz
+│   ├── bdeeb4cea434987b68f99875e9b540b69bc0a82f.nq.gz
+│   ├── bff84261ed42ec0576a5d727486038f7455bdfcf.nq.gz
+│   ├── c886d2e10c6b7ae39a992a4530ee98b22752bdf3.nq.gz
+│   ├── ca577553ec8e8ba5e070f397e598a8b648e45cb3.nq.gz
+│   ├── cbe4bbba67193fb674ebc38f17d7d2336b20c76c.nq.gz
+│   ├── d64c0ba5542c9dd38327edd213456ccc66b7f774.nq.gz
+│   ├── d72f77791298af28c0eacb86df6e3d23e7dabcd4.nq.gz
+│   ├── dfe8d7a7127270da49a374972a845e3d07749815.nq.gz
+│   ├── e26d290437fa4acf753254e7fcf034a332276338.nq.gz
+│   ├── e69de29bb2d1d6434b8b29ae775ad8c2e48c5391.nq.gz
+│   ├── e7d793fdd38eda5f55c803505497490f20731f38.nq.gz
+│   ├── e8e83247027bff4ec66dd45ca68a1073a2dafabc.nq.gz
+│   ├── f14e2092e8a8d3b9342fbeb7fd24411df039c337.nq.gz
+│   ├── fb9a64636788d3ff88610d1a9bd49d9c55527749.nq.gz
+│   └── ff0337c777c794a33c17bb39ba1ccec2c18bd5dc.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── 5c9d51d322298c5c0777088af504e044b0896d37.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+13 directories, 77 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[thombashi/pingparsing](https://github.com/thombashi/pingparsing)
+
+---
+*Parsed on 2026-10-18 by [repolex](https://repolex.ai)*
