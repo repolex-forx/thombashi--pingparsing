@@ -8,7 +8,8 @@
     {
       "@id": "https://repolex.ai/r/thombashi/pingparsing/commit/5c9d51d322298c5c0777088af504e044b0896d37",
       "git:hexsha": "5c9d51d322298c5c0777088af504e044b0896d37",
-      "repolex:parseStatus": "ast_complete"
+      "repolex:parseStatus": "parsed",
+      "repolex:parsedAt": "2026-10-18T09:24:25.170389+00:00"
     },
     {
       "@id": "https://repolex.ai/r/thombashi/pingparsing/commit/38b738dcdb6d5099c2a1afc072135db8757c76b1",
